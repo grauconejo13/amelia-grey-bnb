@@ -1,16 +1,57 @@
-# React + Vite
+# Amelia Grey – Imaginary Bed & Breakfast
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A UI-focused, front-end–only web application for a fictional bed & breakfast.
 
-Currently, two official plugins are available:
+This project is intentionally imaginary, but designed and implemented as if it were
+a real product. The focus is on layout, interaction design, and booking-style user
+flows without backend complexity.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Story-driven bed & breakfast concept
+- Room listings with detailed layouts
+- Simulated availability and inquiry flow
+- Responsive design using Bootstrap
+- Clean, accessible UI with clear hierarchy
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧱 Tech Stack
+
+- React (Vite)
+- Bootstrap
+- JavaScript
+- Static & simulated data (no backend)
+
+---
+
+## 🧠 Project Scope
+
+This project is **front-end only by design**.
+
+- All data is simulated using local state or static files
+- No backend, APIs, authentication, or database
+- No toast notifications or fake network interactions
+
+The goal is to demonstrate front-end structure, UI decisions,
+and user experience patterns in a booking-style interface.
+
+---
+
+## 🚧 Status
+
+Stable foundation.  
+Ongoing UI refinements and feature exploration.
+
+---
+
+## 📁 Project Structure
+
+```txt
+src/
+  components/
+  pages/
+  data/
+  styles/
