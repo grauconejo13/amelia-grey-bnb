@@ -1,4 +1,6 @@
 import Navbar from "./components/Navbar";
+import Gallery from "./components/Gallery";
+import InfoAmenities from "./pages/InfoAmenities";
 import Footer from "./components/Footer";
 
 function App() {
@@ -6,11 +8,15 @@ function App() {
     <>
       <Navbar />
 
-      <main className="container py-5">
-        <h1 className="mb-3">Welcome to Amelia Grey</h1>
-        <p className="text-muted">
-          A quiet retreat inspired by English country charm.
-        </p>
+      <main className="container-fluid p-0">
+        <div className="row g-0">
+          <div className="col-lg-5">
+            <Gallery />
+          </div>
+          <div className="col-lg-7">
+            <InfoAmenities />
+          </div>
+        </div>
       </main>
 
       <Footer />

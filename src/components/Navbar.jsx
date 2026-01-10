@@ -1,38 +1,41 @@
+import { useState } from "react";
+import { navItems } from "../data/navigation";
+
 function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav className="navbar navbar-expand-lg border-bottom py-3">
-      <div className="container">
-        <a className="navbar-brand fw-semibold" href="/">
-          Amelia Grey
+    <header className="navbar navbar-expand-lg sticky-top" style={{ background: "#2f4f4f" }}>
+      <div className="container-fluid px-4">
+        <a className="navbar-brand" href="#">
+          <img
+            src="https://assets.codepen.io/11990995/home-button.png"
+            alt="Home"
+            width="48"
+            height="48"
+          />
         </a>
 
         <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNav"
-          aria-controls="mainNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          className="navbar-toggler text-white border-0"
+          onClick={() => setOpen(!open)}
         >
-          <span className="navbar-toggler-icon"></span>
+          ☰ MENU
         </button>
 
-        <div className="collapse navbar-collapse" id="mainNav">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-4">
-            <li className="nav-item">
-              <a className="nav-link" href="/rooms">Rooms</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/about">About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/contact">Inquiry</a>
-            </li>
+        <nav className={`collapse navbar-collapse ${open ? "show" : ""}`}>
+          <ul className="navbar-nav ms-auto gap-lg-4">
+            {navItems.map(item => (
+              <li className="nav-item" key={item}>
+                <a className="nav-link text-white fw-semibold" href="#">
+                  {item}
+                </a>
+              </li>
+            ))}
           </ul>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
 
