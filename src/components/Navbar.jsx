@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import { navItems } from "../data/navigation";
+import { useState } from "react";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -7,14 +8,14 @@ function Navbar() {
   return (
     <header className="navbar navbar-expand-lg sticky-top" style={{ background: "#2f4f4f" }}>
       <div className="container-fluid px-4">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img
             src="https://assets.codepen.io/11990995/home-button.png"
             alt="Home"
             width="48"
             height="48"
           />
-        </a>
+        </Link>
 
         <button
           className="navbar-toggler text-white border-0"
@@ -25,13 +26,18 @@ function Navbar() {
 
         <nav className={`collapse navbar-collapse ${open ? "show" : ""}`}>
           <ul className="navbar-nav ms-auto gap-lg-4">
-            {navItems.map(item => (
-              <li className="nav-item" key={item}>
-                <a className="nav-link text-white fw-semibold" href="#">
-                  {item}
-                </a>
-              </li>
-            ))}
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/rooms">Rooms</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/info">Info & Amenities</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/contact">Contact</Link>
+            </li>
           </ul>
         </nav>
       </div>
