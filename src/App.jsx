@@ -18,7 +18,6 @@ function App() {
          <Route path="/rooms" element={<Rooms />} />
          <Route path="/rooms/:id" element={<RoomDetail />} />
         <Route path="/info" element={<InfoPage />} />
-
       </Routes>
 
       <Footer />

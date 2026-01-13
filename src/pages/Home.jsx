@@ -1,6 +1,7 @@
 function Home() {
   return (
     <>
+    <main className="container-fluid px-0">
       {/* HERO */}
       <section className="container py-5 text-center">
         <h1 className="mb-4">Amelia’s Bed & Breakfast Inn</h1>
@@ -23,7 +24,7 @@ function Home() {
             </p>
 
             <img
-              src="https://assets.codepen.io/11990995/owner.jpg"
+              src="https://assets.codepen.io/11990995/owner-amelia-grey.png"
               alt="Owner"
               className="img-fluid rounded mb-4"
             />
@@ -115,6 +116,7 @@ function Home() {
           </div>
         </div>
       </section>
+      </main>
     </>
   );
 }
