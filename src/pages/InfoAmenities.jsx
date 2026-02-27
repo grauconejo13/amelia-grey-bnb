@@ -1,9 +1,9 @@
 function InfoAmenities() {
   return (
-    <aside
-      className="p-4"
-      style={{ background: "#d1ecf1", borderLeft: "4px solid #2f4f4f" }}
-    >
+<aside
+  className="p-5 w-100 h-100 overflow-auto info-panel"
+  style={{ background: "#d1ecf1" }}
+>
       <h1 className="mb-4">Amelia’s Bed & Breakfast Inn</h1>
 
       <h3>Visitor’s Guide</h3>

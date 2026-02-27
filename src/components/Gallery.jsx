@@ -3,9 +3,9 @@ import { galleryImages } from "../data/gallery";
 function Gallery() {
   return (
     <section
-      className="p-4 text-center"
-      style={{ background: "#708090", color: "white" }}
-    >
+  className="p-4 text-center h-100"
+  style={{ background: "#708090", color: "white" }}
+>
       <h2 className="mb-4">Photo Gallery</h2>
 
       <div className="row g-4">

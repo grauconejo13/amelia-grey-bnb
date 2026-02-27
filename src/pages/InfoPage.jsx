@@ -4,11 +4,12 @@ import InfoAmenities from "./InfoAmenities";
 function InfoPage() {
   return (
     <main className="container-fluid p-0">
-      <div className="row g-0">
-        <div className="col-lg-5">
+      <div className="row g-0 align-items-stretch info-row">
+        <div className="col-lg-6 d-flex">
           <Gallery />
         </div>
-        <div className="col-lg-7">
+
+        <div className="col-lg-6 d-flex">
           <InfoAmenities />
         </div>
       </div>
