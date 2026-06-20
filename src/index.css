@@ -1,6 +1,17 @@
-/* Only constrain height on large screens */
+/* Side-by-side equal-height layout, large screens only */
 @media (min-width: 992px) {
-  aside {
-    max-height: 100vh;
+  .info-row {
+    height: 100vh;
+  }
+
+  .info-panel {
+    overflow-y: auto;
+  }
+}
+
+/* Stacked, naturally-scrolling layout on tablet/mobile */
+@media (max-width: 991px) {
+  .info-panel {
+    overflow-y: visible;
   }
 }
