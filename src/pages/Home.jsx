@@ -1,4 +1,9 @@
+import { contact } from "../data/contact";
+
 function Home() {
+  const handleContactSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
     <>
     <main className="container-fluid px-0">
@@ -50,16 +55,14 @@ function Home() {
           {/* CONTACT */}
           <div className="col-md-6" id="contact">
             <h2 className="mb-3">Any Questions?</h2>
-            <p className="text-muted">
-              Contact us between 10:00 AM – 8:00 PM by phone, or anytime by email.
-            </p>
+            <p className="text-muted">{contact.hours}</p>
 
             <p>
-              Phone: <a href="#">(123) 456-7890</a><br />
-              Email: <a href="mailto:email@something.com">email@something.com</a>
+              Phone: <a href={contact.phoneHref}>{contact.phone}</a><br />
+              Email: <a href={`mailto:${contact.email}`}>{contact.email}</a>
             </p>
 
-            <form className="mt-4">
+            <form className="mt-4" onSubmit={handleContactSubmit}>
               <input className="form-control mb-3" placeholder="Name" />
               <input className="form-control mb-3" placeholder="Email" />
               <input className="form-control mb-3" placeholder="Subject" />
@@ -69,10 +72,11 @@ function Home() {
                 placeholder="Your message..."
               ></textarea>
 
-              <button className="btn btn-outline-secondary me-2">
+              <p className="small text-muted">This demo form does not send messages.</p>
+              <button type="submit" className="btn btn-outline-secondary me-2">
                 Send
               </button>
-              <button className="btn btn-light">
+              <button type="reset" className="btn btn-light">
                 Reset
               </button>
             </form>
@@ -81,12 +85,12 @@ function Home() {
           {/* LOCATION */}
           <div className="col-md-6" id="location">
             <h2 className="mb-3">Location</h2>
-            <p>13 Wanderlust Lane, Somewhere, Ontario</p>
+            <p>{contact.address}</p>
 
-            <a href="https://www.google.ca/maps/">
+            <a href={contact.mapUrl}>
               <img
-                src="https://assets.codepen.io/11990995/location.png"
-                alt="Map"
+                src={contact.mapImage}
+                alt={`Map showing the location of ${contact.name}`}
                 className="img-fluid rounded shadow-sm"
               />
             </a>

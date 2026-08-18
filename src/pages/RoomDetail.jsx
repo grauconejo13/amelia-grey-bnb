@@ -8,6 +8,8 @@ import BookingModal from "../components/BookingModal";
 function RoomDetail() {
   const { id } = useParams();
   const room = rooms.find(r => r.id === Number(id));
+  const [selectedImage, setSelectedImage] = useState(room?.gallery[0] ?? null);
+  const [showBooking, setShowBooking] = useState(false);
 
   if (!room) {
     return (
@@ -16,9 +18,6 @@ function RoomDetail() {
       </div>
     );
   }
-
-  const [selectedImage, setSelectedImage] = useState(room.gallery[0]);
-  const [showBooking, setShowBooking] = useState(false);
 
   return (
     <main className="container py-5">

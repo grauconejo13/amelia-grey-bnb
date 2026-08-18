@@ -52,10 +52,13 @@ function BookingForm({ rate }) {
         <p className="text-muted small">
           Standard Rate: ${rate} / night
         </p>
+        <p className="text-muted small">
+          This is a mock reservation form and does not submit a booking.
+        </p>
 
         <div className="d-flex gap-2">
           <button type="button" className="btn btn-outline-secondary w-100">
-            Submit
+            Submit inquiry (demo)
           </button>
           <button type="reset" className="btn btn-light w-100">
             Reset

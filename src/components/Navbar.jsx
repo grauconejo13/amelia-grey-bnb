@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { navItems } from "../data/navigation";
 import { useState } from "react";
 
 function Navbar() {

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function RoomGallery({ images, onSelect }) {
   return (
     <div className="row g-3">

@@ -1,3 +1,5 @@
+import { contact } from "../data/contact";
+
 function Footer() {
   const year = new Date().getFullYear();
 
@@ -12,10 +14,11 @@ function Footer() {
     >
       <div className="container text-center">
         <p className="mb-1">
-          © {year} Amelia Grey’s Bed & Breakfast Inn
+          © {year} {contact.name}
         </p>
         <p className="mb-0 text-muted">
-          A fictional establishment · UI demonstration only
+          <a href={contact.phoneHref}>{contact.phone}</a> · {" "}
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>
         </p>
       </div>
     </footer>

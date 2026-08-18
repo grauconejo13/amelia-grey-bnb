@@ -1,3 +1,5 @@
+import { contact } from "../data/contact";
+
 function InfoAmenities() {
   return (
     <aside
@@ -46,10 +48,10 @@ function InfoAmenities() {
       <hr />
 
       <h3>Location & Contact</h3>
-      <p>123 Tranquil Lane, Willowfield, Ontario, Canada</p>
-      <p>📞 (555) 123-4567</p>
+      <p>{contact.address}</p>
+      <p>📞 <a href={contact.phoneHref}>{contact.phone}</a></p>
       <p>
-        ✉️ <a href="mailto:info@ameliasinn.com">info@ameliasinn.com</a>
+        ✉️ <a href={`mailto:${contact.email}`}>{contact.email}</a>
       </p>
     </aside>
   );
