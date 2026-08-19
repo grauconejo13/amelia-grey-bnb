@@ -1,59 +1,82 @@
+import { galleryImages } from "../data/gallery";
 import { contact } from "../data/contact";
+
+const amenities = [
+  ["Breakfast", "A relaxed morning menu."],
+  ["Essentials", "Thoughtful comforts provided."],
+  ["Pet friendly", "Four-legged guests welcome."],
+  ["Pickup & drop-off", "Airport or hub by arrangement."],
+  ["Free parking", "Easy arrival and departure."],
+  ["Walking tour", "A gentle way to explore."],
+  ["Local guide", "Places worth knowing nearby."],
+];
 
 function InfoAmenities() {
   return (
-    <aside
-      className="p-5 w-100 h-100 info-panel"
-      style={{ background: "#d1ecf1" }}
-    >
-      <h1 className="mb-4">Amelia’s Bed & Breakfast Inn</h1>
+    <>
+      <section className="section-compact">
+        <div className="container">
+          <div className="row g-0 align-items-stretch">
+            <div className="col-lg-6">
+              <img className="arrival-image" src={galleryImages[0]} alt="A quiet room at Amelia Grey" />
+            </div>
+            <div className="col-lg-6 arrival-copy">
+              <div className="editorial-panel-content">
+                <p className="eyebrow">Arrival and breakfast</p>
+                <h2>Settle in slowly.</h2>
+                <ul className="fact-list">
+                  <li><strong>Check-in</strong>3 PM – 8 PM, by arrangement. Please provide your arrival time at least one day in advance.</li>
+                  <li><strong>Check-out</strong>11 AM</li>
+                  <li><strong>Breakfast</strong>7:30 AM – 10:30 AM, in the dining room or garden.</li>
+                  <li><strong>Arrival notice</strong>At least 48 hours before check-in.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h3>Visitor’s Guide</h3>
-      <ul>
-        <li>Check-in: 3 PM</li>
-        <li>Check-out: 11 AM</li>
-      </ul>
+      <section className="section-compact">
+        <div className="container">
+          <p className="eyebrow">At your service</p>
+          <h2 className="mb-4">A few thoughtful extras.</h2>
+          <div className="amenity-grid">
+            {amenities.map(([title, text]) => (
+              <article key={title}>
+                <h3>{title}</h3>
+                <p className="mb-0">{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <h3>Offers</h3>
-      <ul>
-        <li>Breakfast Menu</li>
-        <li>Essentials Provided</li>
-        <li>Pet-Friendly Rooms</li>
-        <li>Pick-up / Drop-off (Airport or Hub)</li>
-        <li>Free Parking</li>
-        <li>Walking Tour</li>
-        <li>Local Guide</li>
-      </ul>
-
-      <h3>Policies & Details</h3>
-
-      <p><strong>Minimum Stay:</strong> 2 nights. 10% discount for bookings over 28 nights.</p>
-      <p><strong>Minimum Notice:</strong> At least 48 hours before check-in.</p>
-
-      <p>
-        <strong>Check-in Time:</strong> 3 PM – 8 PM (by arrangement).<br />
-        Arrival time must be provided at least 1 day in advance.
-      </p>
-
-      <p>
-        <strong>Bookings & Payments:</strong> Via the “Rooms” page.<br />
-        Cash, credit card, and debit card accepted.<br />
-        <em>Minimum 7-day cancellation notice.</em>
-      </p>
-
-      <p>
-        <strong>Breakfast:</strong> 7:30 AM – 10:30 AM, dining room or garden.
-      </p>
-
-      <hr />
-
-      <h3>Location & Contact</h3>
-      <p>{contact.address}</p>
-      <p>📞 <a href={contact.phoneHref}>{contact.phone}</a></p>
-      <p>
-        ✉️ <a href={`mailto:${contact.email}`}>{contact.email}</a>
-      </p>
-    </aside>
+      <section className="section">
+        <div className="container">
+          <div className="row g-0">
+            <section className="col-lg-6 policy-panel">
+              <div className="editorial-panel-content">
+                <p className="eyebrow">Policies</p>
+                <h2>Good to know.</h2>
+                <p><strong>Minimum stay:</strong> 2 nights. A 10% discount applies to bookings over 28 nights.</p>
+                <p><strong>Bookings &amp; payments:</strong> Via the Rooms page. Cash, credit card, and debit card accepted.</p>
+                <p className="mb-0"><strong>Cancellation:</strong> Minimum 7-day cancellation notice.</p>
+              </div>
+            </section>
+            <section className="col-lg-6 policy-panel">
+              <div className="editorial-panel-content">
+                <p className="eyebrow">Visitor's guide</p>
+                <h2>Make it your own.</h2>
+                <p><strong>Breakfast menu:</strong> Served each morning from 7:30 AM – 10:30 AM.</p>
+                <img className="breakfast-image" src="https://assets.codepen.io/11990995/breakfast01.jpg" alt="Breakfast served at the inn" />
+                <p className="mt-3"><strong>Local time:</strong> Ask about the garden, walking tour, and local guide during your stay.</p>
+                <p className="mb-0"><strong>Location:</strong> {contact.address}<br /><a href={contact.phoneHref}>{contact.phone}</a> · <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 

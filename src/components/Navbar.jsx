@@ -5,8 +5,8 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="navbar navbar-expand-lg sticky-top" style={{ background: "#2f4f4f" }}>
-      <div className="container-fluid px-4">
+    <header className="navbar navbar-expand-lg sticky-top site-navbar">
+      <div className="container px-3">
         <Link className="navbar-brand" to="/">
           <img
             src="https://assets.codepen.io/11990995/home-button.png"

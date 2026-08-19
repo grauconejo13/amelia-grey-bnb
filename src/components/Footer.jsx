@@ -1,28 +1,9 @@
+import { Link } from "react-router-dom";
 import { contact } from "../data/contact";
 
 function Footer() {
   const year = new Date().getFullYear();
-
-  return (
-    <footer
-      className="border-top py-4 mt-5"
-      style={{
-        backgroundColor: "#fdfbf7",   // soft cream
-        color: "#3a3a3a",             // gentle ink
-        fontSize: "0.9rem"
-      }}
-    >
-      <div className="container text-center">
-        <p className="mb-1">
-          © {year} {contact.name}
-        </p>
-        <p className="mb-0 text-muted">
-          <a href={contact.phoneHref}>{contact.phone}</a> · {" "}
-          <a href={`mailto:${contact.email}`}>{contact.email}</a>
-        </p>
-      </div>
-    </footer>
-  );
+  return <footer className="site-footer"><div className="container text-center"><h2>{contact.name}</h2><p className="mb-2">{contact.address}</p><p className="mb-3"><a href={contact.phoneHref}>{contact.phone}</a> · <a href={`mailto:${contact.email}`}>{contact.email}</a></p><nav className="footer-nav" aria-label="Footer navigation"><Link to="/">Home</Link><Link to="/rooms">Rooms</Link><Link to="/info">Info &amp; Amenities</Link><Link to="/contact">Contact</Link></nav><p className="small mt-3 mb-0">© {year} {contact.name}</p></div></footer>;
 }
 
 export default Footer;

@@ -1,6 +1,6 @@
 function BookingForm({ rate }) {
   return (
-    <div className="p-4 border rounded bg-light">
+    <div className="p-4 border booking-form">
       <h3 className="mb-4 text-center">Reservation</h3>
 
       <form>

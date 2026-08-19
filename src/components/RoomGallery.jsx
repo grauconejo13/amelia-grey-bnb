@@ -1,6 +1,6 @@
 function RoomGallery({ images, onSelect }) {
   return (
-    <div className="row g-3">
+    <div className="row g-2 room-thumbnails">
       {images.map((img, index) => (
         <div className="col-6 col-md-4" key={index}>
           <img

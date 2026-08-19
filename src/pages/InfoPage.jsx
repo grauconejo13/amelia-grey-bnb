@@ -1,20 +1,8 @@
-import Gallery from "../components/Gallery";
 import InfoAmenities from "./InfoAmenities";
+import Gallery from "../components/Gallery";
 
 function InfoPage() {
-  return (
-    <main className="container-fluid p-0">
-      <div className="row g-0 align-items-stretch info-row">
-        <div className="col-lg-6 d-flex">
-          <Gallery />
-        </div>
-
-        <div className="col-lg-6 d-flex">
-          <InfoAmenities />
-        </div>
-      </div>
-    </main>
-  );
+  return <main className="info-page"><section className="info-header section-compact"><div className="container"><p className="eyebrow">Plan your stay</p><h1>Everything in its place.</h1><p className="mb-0 col-lg-7">A simple guide to arriving, settling in, and making the most of your time at Amelia Grey.</p></div></section><InfoAmenities /><Gallery /></main>;
 }
 
 export default InfoPage;

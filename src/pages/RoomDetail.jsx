@@ -13,17 +13,18 @@ function RoomDetail() {
 
   if (!room) {
     return (
-      <div className="container py-5">
+      <div className="container page-shell">
         <h2>Room not found</h2>
       </div>
     );
   }
 
   return (
-    <main className="container py-5">
-      <h1 className="mb-4">{room.name}</h1>
+    <main className="container page-shell room-detail-page">
+      <p className="section-kicker mb-2">Your stay</p>
+      <h1 className="mb-3">{room.name}</h1>
 
-      <div className="row g-5">
+      <div className="row g-4">
         {/* LEFT — thumbnails */}
         <div className="col-lg-4">
           <RoomGallery
@@ -45,11 +46,15 @@ function RoomDetail() {
           </div>
 
           {/* Description */}
-          <h4>About this room</h4>
-          <p>{room.description}</p>
+          <div className="detail-copy">
+            <p className="eyebrow">Room details</p>
+            <h4>About this room</h4>
+            <p>{room.description}</p>
+            <p className="text-muted">Standard rate: ${room.rate} / night</p>
+          </div>
 
           <button
-            className="btn btn-outline-secondary mt-3"
+            className="btn btn-outline-secondary booking-button"
             onClick={() => setShowBooking(true)}
           >
             Book Now

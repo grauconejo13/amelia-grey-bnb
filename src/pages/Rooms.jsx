@@ -3,10 +3,11 @@ import RoomCard from "../components/RoomCard";
 
 function Rooms() {
   return (
-    <main className="container-fluid py-5">
+    <main className="container-fluid page-shell rooms-page">
       {/* CONTENT WIDTH CONTROL */}
       <div className="container">
-        <h1 className="text-center mb-5">Our Rooms</h1>
+        <p className="section-kicker text-center mb-2">Stay awhile</p>
+        <h1 className="text-center mb-4">Our Rooms</h1>
 
         <div className="row g-4 justify-content-center">
           {rooms.map((room) => (
