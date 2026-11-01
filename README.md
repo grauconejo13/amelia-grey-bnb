@@ -1,57 +1,65 @@
-# Amelia Grey – Imaginary Bed & Breakfast
+# Amelia Grey BNB
 
-A UI-focused, front-end–only web application for a fictional bed & breakfast.
+A fictional bed-and-breakfast **frontend UI prototype**, built to demonstrate room discovery, storytelling, responsive design, and reservation-style interactions. It is not a real accommodation or booking service.
 
-This project is intentionally imaginary, but designed and implemented as if it were
-a real product. The focus is on layout, interaction design, and booking-style user
-flows without backend complexity.
+## Features
+- Home, room listings, individual room details, information, and contact pages
+- Room and gallery components backed by static JavaScript data
+- Mock reservation form and modal, clearly identified as demos
+- Responsive presentation using Bootstrap and React
 
----
+**Important:** Room inventory and booking interactions are simulated. No real availability is checked, no inquiry is transmitted, and no reservation or payment is taken.
 
-## ✨ Features
+## Stack
+- React 19, React Router 7, JavaScript
+- Vite 7
+- Bootstrap 5 and React Bootstrap
+- Local/static data only; no application backend or authentication
 
-- Story-driven bed & breakfast concept
-- Room listings with detailed layouts
-- Simulated availability and inquiry flow
-- Responsive design using Bootstrap
-- Clean, accessible UI with clear hierarchy
+## Local development
+Requires Node.js 22 and npm.
 
----
+```bash
+npm ci
+npm run dev
+```
 
-## 🧱 Tech Stack
+For quality checks:
 
-- React (Vite)
-- Bootstrap
-- JavaScript
-- Static & simulated data (no backend)
+```bash
+npm run lint
+npm run build
+```
 
----
+There is no automated test suite yet. CI runs lint and build, not functional tests.
 
-## 🧠 Project Scope
-
-This project is **front-end only by design**.
-
-- All data is simulated using local state or static files
-- No backend, APIs, authentication, or database
-- No toast notifications or fake network interactions
-
-The goal is to demonstrate front-end structure, UI decisions,
-and user experience patterns in a booking-style interface.
-
----
-
-## 🚧 Status
-
-Stable foundation.  
-Ongoing UI refinements and feature exploration.
-
----
-
-## 📁 Project Structure
-
-```txt
+## Project map
+```text
 src/
-  components/
-  pages/
-  data/
-  styles/
+  App.jsx                  # Routes and shared layout
+  pages/                   # Page views
+  components/              # UI and mock booking components
+  data/                    # Static content
+  App.css, index.css       # Styles
+docs/                      # Architecture, decisions, roadmap, testing
+.project/                  # Searchable project metadata
+.github/                   # CI and pull request template
+```
+
+## Project discovery
+**Tags:** `web-app`, `creative-media`, `accessibility`
+
+- [Machine-readable manifest](.project/manifest.json)
+- [Implemented, simulated, and planned capabilities](.project/capabilities.md)
+
+## Documentation
+- [Architecture](docs/ARCHITECTURE.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Decisions](docs/DECISIONS.md)
+- [Testing guide](docs/TESTING.md)
+
+## Status
+Frontend prototype with a stable foundation and planned UI/accessibility improvements. Implementation notes are based on repository inspection; passing local checks and real browser behavior must be verified separately.
+
+## Scope
+Keep real reservations, payments, logins, personal-data storage, and external integrations out of scope unless the product direction is explicitly reconsidered.
