@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "name": "Amelia Grey BNB",
+  "slug": "amelia-grey-bnb",
+  "repository": "grauconejo13/amelia-grey-bnb",
+  "visibility": "public",
+  "category": "fictional-hospitality-ui",
+  "status": "prototype",
+  "purpose": "Fictional bed-and-breakfast frontend demonstrating room discovery and a simulated reservation interface.",
+  "target_users": [
+    "portfolio-reviewers",
+    "frontend-developers",
+    "ux-reviewers"
+  ],
+  "tags": [
+    "web-app",
+    "creative-media",
+    "accessibility"
+  ],
+  "stack": [
+    "react",
+    "vite",
+    "javascript",
+    "bootstrap",
+    "react-router"
+  ],
+  "capabilities": {
+    "implemented": [
+      "room-listings",
+      "room-detail-routes",
+      "static-gallery",
+      "mock-reservation-form",
+      "responsive-layout"
+    ],
+    "planned": [
+      "automated-ui-tests",
+      "accessibility-audit"
+    ]
+  },
+  "non_goals": [
+    "real-reservation-processing",
+    "payments",
+    "authentication",
+    "live-availability"
+  ],
+  "related_projects": [],
+  "last_reviewed": "2026-11-01"
+}
